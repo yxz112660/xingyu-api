@@ -1,0 +1,43 @@
+spring:
+  datasource:
+      api:
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://127.0.0.1:9510/api?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=true
+        username: root
+        password: Ebh123!@#
+      cloud:
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://127.0.0.1:9510/cloud?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=true
+        username: root
+        password: Ebh123!@#
+      hiwatch:
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://127.0.0.1:9510/hiwatch?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=true
+        username: root
+        password: Ebh123!@#
+server:
+  port: 8283
+thirdpartyapi:
+  wxb:
+    client_id: ANJIA_WATCH
+    client_secret: c123af6e331cf61c0324cd43cbc2135b
+    grant_type: client_credentials
+    access_token_url: http://open.umeox.com:8080/api/v1/oauth2/accessToken
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

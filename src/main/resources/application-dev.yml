@@ -1,0 +1,38 @@
+spring:
+  datasource:
+      api:
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://192.168.1.107:9510/api?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=true
+        username: root
+        password: Ebh123!@#
+      cloud:
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://192.168.1.107:9510/cloud?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=true
+        username: root
+        password: Ebh123!@#
+      xcx:
+        driver-class-name: com.mysql.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://118.126.114.230:3306/xcx?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
+        username: root
+        password: root
+
+server:
+  port: 8082
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
