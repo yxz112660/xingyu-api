@@ -17,7 +17,7 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         jdbc-url: jdbc:mysql://118.126.114.230:3306/xcx?useUnicode=true&allowMultiQueries=true&rewriteBatchedStatements=true&useSSL=false
         username: root
-        password: root
+        password: Yxz520131467
 
 server:
   port: 8082
